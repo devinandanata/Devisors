@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Form</title>
+    <style>
+        /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f30a0a, #00c6fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container for content */
+.container {
+    background: #c73b3b;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title styling */
+h1 {
+    position: relative;
+    left: 80px; /* Moves the <h1> 50px to the right */
+    bottom: 120px; 
+    text-align: left; 
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #970303;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 14px;
+    color: #f6f5f5;
+    text-align: left;
+}
+
+form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+form input:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+}
+
+form button {
+    background-color: #4facfe;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #00c6fb;
+}
+
+/* Search Results styling */
+#results {
+    margin-top: 30px;
+    color: #333;
+}
+
+    </style>
+</head>
+    <h1>FIND A DONOR        </h1>
+    <br>
+
+
+<body>
+    
+    <!-- Search Form -->
+    <form action="/search" method="GET">
+        <label for="place">    Enter the district: </label>
+        <input type="text" id="place" name="place" placeholder="Search..." required>
+        
+        <label for="group">           Enter the required blood group: </label>
+        <input type="text" id="group" name="group" placeholder="Search..." required>
+        
+        <button type="submit">Search</button>
+    </form>
+
+    
+    <div id="results">
+    </div>
+
+</body>
+</html>
